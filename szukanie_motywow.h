@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 
+#define DZIUBEK '>'
 
 using namespace std;
 
@@ -23,7 +24,6 @@ int i, j, n, m, p;
 
 void Read_sequences()
 {
-	char dziubek = '>';
 	string row;
 	int iter = -1;
 
@@ -38,7 +38,7 @@ void Read_sequences()
 		getline(file, row);
 		row = row.c_str();
 
-		if (dziubek == row[0])
+		if (DZIUBEK == row[0])
 		{
 			sequences.push_back(vector<char>());
 			iter++;
@@ -72,7 +72,6 @@ void Show_sequences()
 
 void Read_qualities()
 {
-	char dziubek = '>';
 	string line;
 	int iter = -1;
 
